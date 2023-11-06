@@ -13,7 +13,13 @@ class Auth:
                      excluded_paths: List[str]) -> bool:
         """ Require method authentication
         """
-        return False
+        if path and excluded_paths:
+            if path in excluded_paths:
+                return False
+            if path[:-1] in excluded_paths or\
+                    path + '/' in excluded_paths:
+                return False
+        return True
 
     def authorization_header(self, request=None) -> str:
         """ check header authorization
