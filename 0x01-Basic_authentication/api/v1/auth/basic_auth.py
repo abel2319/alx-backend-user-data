@@ -18,5 +18,5 @@ class BasicAuth(Auth):
             not isinstance(authorization_header, str) or\
                 not authorization_header.startswith('Basic '):
             return None
-        
+
         return authorization_header.split(' ')[1]
