@@ -16,10 +16,10 @@ auth = getenv("AUTH_TYPE", None)
 
 
 if auth:
-    if auth == 'basci_auth':
+    if auth == 'basic_auth':
         from api.v1.auth.basic_auth import BasicAuth
         auth = BasicAuth()
-    else:
+    elif auth == 'auth':
         from api.v1.auth.auth import Auth
         auth = Auth()
 
