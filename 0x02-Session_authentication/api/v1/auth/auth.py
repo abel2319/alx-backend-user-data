@@ -42,4 +42,3 @@ class Auth:
 
         SESSION_NAME = getenv('SESSION_NAME')
         return request.cookies.get(SESSION_NAME, None)
- 
