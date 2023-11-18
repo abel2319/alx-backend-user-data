@@ -7,7 +7,7 @@ from flask import abort, jsonify, request
 from models.user import User
 
 
-@app_views.route('/auth_session/login', methods='POST', strict_slashes=False)
+@app_views.route('/auth_session/login', methods=['POST'], strict_slashes=False)
 def login(request):
     """login user
     """
