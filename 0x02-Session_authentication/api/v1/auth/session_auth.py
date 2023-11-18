@@ -7,6 +7,7 @@ from models.user import User
 from typing import List, TypeVar
 from uuid import uuid4
 
+
 class SessionAuth(Auth):
     """ Session authentication
     """
@@ -21,4 +22,3 @@ class SessionAuth(Auth):
         id = uuid4()
         SessionAuth.user_id_by_session_id[id] = user_id
         return id
-    
