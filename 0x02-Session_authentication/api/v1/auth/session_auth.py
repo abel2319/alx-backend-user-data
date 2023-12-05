@@ -34,6 +34,6 @@ class SessionAuth(Auth):
         """(overload) that returns a User instance based on a cookie value
         """
         session_name = self.session_cookie(request)
-        user_id = self.user_id_by_session_id(session_name)
+        user_id = self.user_id_for_session_id(session_name)
         user = User.get(user_id)
         return user
